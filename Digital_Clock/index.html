@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Clock UI Design</title>
+
+    <script type="text/javascript">
+      window.onload = main;
+
+      function main() {
+        const hours = document.querySelector("#hour");
+        const minutes = document.querySelector("#minutes");
+        const seconds = document.querySelector("#seconds");
+
+        const h = new Date().getHours();
+        const m = new Date().getMinutes();
+        const s = new Date().getSeconds();
+
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+      }
+
+      const interval = setInterval(main, 1000);
+    </script>
+  </head>
+
+  <body>
+    <div id="clock">
+      <h2>The Time is now</h2>
+
+      <div id="time">
+        <div>
+          <span id="hour">00</span>
+          <span>Hour</span>
+        </div>
+
+        <div>
+          <span id="minutes">00</span>
+          <span>Minutes</span>
+        </div>
+
+        <div>
+          <span id="seconds">00</span>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

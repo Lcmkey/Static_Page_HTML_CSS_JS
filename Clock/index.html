@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Clock UI Dark</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <!-- <link rel="stylesheet" href="./whiteClock.style.css" /> -->
+    <script type="text/javascript">
+      window.onload = main;
+
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max)) + 1;
+      }
+
+      function main() {
+        LoadCSS(`style_${getRandomInt(2)}.css`);
+        const deg = 6;
+
+        const hr = document.querySelector("#hr");
+        const mn = document.querySelector("#mn");
+        const sc = document.querySelector("#sc");
+
+        let day, hh, mm, ss;
+
+        setInterval(() => {
+          day = new Date();
+          hh = day.getHours() * 30;
+          mm = day.getMinutes() * deg;
+          ss = day.getSeconds() * deg;
+
+          hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+          mn.style.transform = `rotateZ(${mm}deg)`;
+          sc.style.transform = `rotateZ(${ss}deg)`;
+        }, 1000);
+      }
+
+      function LoadCSS(cssURL) {
+        // 'cssURL' is the stylesheet's URL, i.e. /css/styles.css
+
+        return new Promise(function(resolve, reject) {
+          var link = document.createElement("link");
+
+          link.rel = "stylesheet";
+
+          link.href = cssURL;
+
+          document.head.appendChild(link);
+
+          link.onload = function() {
+            resolve();
+
+            console.log("CSS has loaded!");
+          };
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+  </body>
+</html>
