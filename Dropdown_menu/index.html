@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="action">
+        <div class="profile" onclick="menuToggler();">
+            <img src="./assert/icon.png" alt="">
+        </div>
+
+        <div class="menu">
+            <h3>Someone Famous<br /> <span>Website Designer</span></h3>
+            <ul>
+                <li><img src="./assert/user.png" alt=""><a href="#">My Profile</a></li>
+                <li><img src="./assert/edit.png" alt=""><a href="#">Edit Profile</a></li>
+                <li><img src="./assert/inbox.png" alt=""><a href="#">Inbox</a></li>
+                <li><img src="./assert/settings.png" alt=""><a href="#">Setting</a></li>
+                <li><img src="./assert/help.png" alt=""><a href="#">Help</a></li>
+                <li><img src="./assert/logout.png" alt=""><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const menuToggler = () => {
+            const toggleMenu = document.querySelector(".menu");
+            toggleMenu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
