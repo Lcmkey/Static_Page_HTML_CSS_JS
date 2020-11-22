@@ -12,7 +12,7 @@
 }
  .slide-container {
 	 margin: auto;
-	 width: 600px;
+	 width: 350px;
 	 text-align: center;
 }
  .wrapper {
@@ -184,11 +184,19 @@
 	 clear: both;
 	 height: 0;
 }
+.slick-prev:before {
+  /* color: red; */
+}
+
  .slick-prev {
-	 left: 100px;
+	 left: -10px;
 	 z-index: 999;
 }
+.slick-next:before {
+  /* color: red; */
+}
  .slick-next {
-	 right: 100px;
+	 /* right: 100px; */
 	 z-index: 999;
+   right: -10px;
 }
