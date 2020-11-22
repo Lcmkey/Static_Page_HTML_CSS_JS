@@ -15,6 +15,14 @@ html, body {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+}
+
+.level.center {
+  width: 100px;
+}
+.points.center {
+  width: 100px;
 }
 
 .card {
