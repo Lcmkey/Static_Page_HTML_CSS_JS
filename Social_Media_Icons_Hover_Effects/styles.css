@@ -125,3 +125,8 @@ ul li:hover:nth-child(5) a {
 ul li:hover:nth-child(5) a:after {
   background: #f1395c;
 }
+
+.desc {
+  margin-top: 40px;
+  font-weight: 900;
+}
