@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+/* border radius */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #263238;
+}
+
+.loading_dot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+  animation: loading 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes loading {
+  0%, 100% {
+    transform: translatey(-2.5rem);
+    background-color: #ffb300;
+  }
+  50% {
+    transform: translatey(2.5rem);
+    background-color: #d81b60;
+  }
+}
+
+.loading div:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.loading div:nth-child(3) {
+  animation-delay: 0.9s;
+}
